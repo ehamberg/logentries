@@ -5,7 +5,8 @@ module Network.Wai.Middleware.RequestLogger.Internal.Formatting
   ( buildLogMessage
   ) where
 
-import qualified Data.ByteString.Char8 as BS8
+import Data.ByteString (ByteString)
+import qualified Data.ByteString as BS
 import Data.Monoid ((<>))
 import Data.UUID.Types (UUID)
 import qualified Data.UUID.Types as UUID
