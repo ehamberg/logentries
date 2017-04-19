@@ -76,7 +76,7 @@ logRequests config@Config{..} logChan = do
     (serverAddr:_) ->
       bracket
         (openSocket serverAddr)
-        sClose
+        close
         (sendLogMessage config logChan)
 
 openSocket :: AddrInfo -> IO Socket
