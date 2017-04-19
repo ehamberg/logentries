@@ -24,7 +24,8 @@ import Data.Default (def)
 import Data.Monoid ((<>))
 import Data.UUID.Types (UUID)
 import qualified Data.UUID.Types as UUID
-import Network.Socket
+import Network.Socket hiding (send)
+import Network.Socket.ByteString (send)
 import System.IO.Unsafe (unsafePerformIO)
 import System.Log.FastLogger (LogStr, fromLogStr, toLogStr)
 
